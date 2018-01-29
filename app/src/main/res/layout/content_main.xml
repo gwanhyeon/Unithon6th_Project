@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:id="@+id/searchLayout"
+                android:paddingLeft="28dp"
+                android:paddingRight="28px">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text"
+                    android:ems="10"
+                    android:id="@+id/editText"
+                    android:hint="검색하기"
+                    android:textSize="15sp"
+                    android:textColorHint="@color/color_02"
+                    android:gravity="center"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:layout_marginRight="6dp">
+
+                    <ImageView
+                        android:id="@+id/searchButton"
+                        android:onClick="onSearchButtonClicked"
+                        android:background="@drawable/icn_search"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"/>
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <!--progress bar-->
+
+
+            <!--맞춤검색-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="11dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="76dp"
+                    android:layout_height="18dp"
+                    android:background="@drawable/text_customize"
+                    android:layout_marginRight="28dp"
+                    android:layout_marginLeft="28dp"/>
+
+                <TextView
+                    android:id="@+id/recommend_funding_text"
+                    android:layout_width="34dp"
+                    android:layout_height="27dp"
+                    android:text="펀딩순"
+                    android:textColor="@color/color_04"
+                    android:layout_marginRight="22dp"/>
+
+                <TextView
+                    android:id="@+id/recommend_price_text"
+                    android:layout_width="34dp"
+                    android:layout_height="27dp"
+                    android:text="가격순"
+                    android:textColor="@color/color_05"
+                    android:layout_marginRight="22dp"/>
+
+                <TextView
+                    android:id="@+id/recommend_popular_text"
+                    android:layout_width="34dp"
+                    android:layout_height="27dp"
+                    android:text="인기순"
+                    android:textColor="@color/color_05"
+                    android:layout_marginRight="22dp"/>
+
+
+                <TextView
+                    android:id="@+id/recommend_data_text"
+                    android:layout_width="34dp"
+                    android:layout_height="27dp"
+                    android:text="날씨순"
+                    android:textColor="@color/color_05"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/color_03">
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="18dp"
+                    android:layout_height="23dp"
+                    android:text="0%"
+                    android:layout_marginRight="6dp"
+                    android:layout_gravity="center"/>
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:max="100"
+                    android:progress="80"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:progressDrawable="@drawable/custom_progressbar"
+                    android:layout_width="252dp"
+                    android:layout_height="3dp"/>
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="23dp"
+                    android:text="80%"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="6dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:id="@+id/categoryLayout"
+                android:weightSum="1"
+                android:background="@color/color_01">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+
+                        <ImageButton
+                            android:id="@+id/categoryButton1"
+                            android:background="@drawable/nuts_catagory"
+                            android:layout_height="88dp"
+                            android:layout_width="88dp"
+                            android:layout_marginTop="25dp"/>
+
+                        <ImageButton
+                            android:id="@+id/categoryButton2"
+                            android:layout_height="88dp"
+                            android:layout_width="88dp"
+                            android:layout_marginLeft="9dp"
+                            android:layout_marginTop="25dp"
+                            android:background="@drawable/fruit_catagory" />
+
+                        <ImageButton
+                            android:layout_width="88dp"
+                            android:layout_height="88dp"
+                            android:id="@+id/categoryButton3"
+                            android:layout_marginLeft="9dp"
+                            android:layout_marginTop="25dp"
+                            android:background="@drawable/vege_catagory" />
+
+                        <ImageButton
+                            android:layout_width="88dp"
+                            android:layout_height="88dp"
+                            android:id="@+id/categoryButton4"
+                            android:layout_marginLeft="9dp"
+                            android:layout_marginTop="25dp"
+                            android:background="@drawable/grain_catagory" />
+
+                        <ImageButton
+                            android:layout_width="88dp"
+                            android:layout_height="88dp"
+                            android:id="@+id/categoryButton5"
+                            android:background="@drawable/ect"
+                            android:layout_marginLeft="9dp"
+                            android:layout_marginTop="25dp"/>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/listLayout">
+
+                <!--
+                <android.support.v7.widget.RecyclerView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/rv"
+                    >
+                </android.support.v7.widget.RecyclerView>
+                -->
+
+                <fragment
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:name="net.bluehack.stttt.ListFragment">
+
+                </fragment>
+
+
+            </FrameLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>
